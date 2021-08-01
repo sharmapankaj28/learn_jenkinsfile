@@ -1,0 +1,14 @@
+pipeline {
+        agent any
+        post {
+                always {
+                        echo 'Inside always'
+                }
+                failure {
+                        echo 'inside failure'
+                }
+                success {
+                        echo 'sucess'
+                }
+        }
+}
