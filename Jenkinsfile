@@ -20,6 +20,7 @@ pipeline {
 			steps {
 				script {
 					echo 'Condition is true. Inside Build Step'
+					echo 'Building version ${appversion}'
 				}
 			}
 		}
