@@ -41,7 +41,6 @@ pipeline {
 			steps {
 				script {
 					echo 'Inside Test Step'
-					// echo "deploying using credentials ${SERVER_CREDENTIALS}"
 				}
 			}
 		}
