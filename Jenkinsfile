@@ -21,8 +21,8 @@ pipeline {
 			steps {
 				script {
 					echo 'Condition is true. Inside Build Step'
-					// echo "Building version ${appversion} "
-				}
+					echo "Building version ${appversion} "
+				
 			}
 		}
 		stage("test") {
@@ -41,7 +41,7 @@ pipeline {
 			steps {
 				script {
 					echo 'Inside Test Step'
-					echo "deploying using credentials ${SERVER_CREDENTIALS}"
+					// echo "deploying using credentials ${SERVER_CREDENTIALS}"
 				}
 			}
 		}
