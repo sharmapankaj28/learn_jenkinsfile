@@ -24,6 +24,11 @@ pipeline {
 			}
 		}
 		stage("test") {
+			when {
+				expression {
+					appversion == '2'
+				}
+			}
 			steps {
 				script {
 					echo 'Inside Test Step'
