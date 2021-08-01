@@ -9,9 +9,14 @@ pipeline {
 			}
 		}
 		stage("build") {
+			when {
+				expression {
+					if BRANCH_NAME == 'main'
+				}
+			}
 			steps {
 				script {
-					echo 'Inside Build Step'
+					echo 'Condition is true. Inside Build Step'
 				}
 			}
 		}
