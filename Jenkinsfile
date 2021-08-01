@@ -1,5 +1,8 @@
 pipeline {
 	agent any
+	environment {
+		appversion = '1.4'
+	}
 	stages {
 		stage("init") {
 			steps {
@@ -11,7 +14,7 @@ pipeline {
 		stage("build") {
 			when {
 				expression {
-					BRANCH_NAME == 'main'
+					appversion == '1.4'
 				}
 			}
 			steps {
