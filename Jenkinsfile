@@ -2,6 +2,7 @@ pipeline {
 	agent any
 	environment {
 		appversion = '1.4'
+		SERVER_CREDENTIALS = credentials('dummy_id')
 	}
 	stages {
 		stage("init") {
@@ -40,6 +41,7 @@ pipeline {
 			steps {
 				script {
 					echo 'Inside Test Step'
+					echo "deploying using credentials ${SERVER_CREDENTIALS}"
 				}
 			}
 		}
